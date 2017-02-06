@@ -4,7 +4,7 @@ bio:                'Welcome to Abhinavs Webpage'
 description:        "My name is Abhinav Garg and I am a first year graduate student at University of Washington's iSchool"
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/IMG_0335.JPG'
+logo:               'assets/img/change.jpeg'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
@@ -38,7 +38,7 @@ disqus_shortname:   abhi32ag
   #ad-slot:
 #bing-verify:
 email:              aagarg@uw.edu
-twitter:            abhi3ag
+#twitter:            abhi3ag
 facebook:           abhinav.garg.5099
 github-url:         /abhi32ag
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
@@ -54,7 +54,7 @@ instagram:          abhi3ag
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
-soundcloud:         abhi3ag
+#soundcloud:         abhi3ag
 #weibo:             username
 #flickr:            username
 #codepen:           username
