@@ -5,7 +5,7 @@ description:        "My name is Abhinav Garg and I am a first year graduate stud
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/IMG_0335.JPG'
-background:         'assets/img/fullsizeoutput_659.jpeg'
+background:         'assets/img/space.jpeg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://abhi32ag.github.io
