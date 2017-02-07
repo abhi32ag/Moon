@@ -3,6 +3,7 @@ layout: page
 title: Ping Me
 excerpt: ""
 comments: false
+background: 'assets/img/place-holder-2.jpeg'
 ---
 <center>
 <b>Academic Email-ID :</b> 
