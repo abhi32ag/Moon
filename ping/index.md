@@ -1,5 +1,5 @@
 ---
-layout: post-list
+layout: post
 title: Ping Me
 excerpt: "Email-ID and Contact Number"
 comments: false
