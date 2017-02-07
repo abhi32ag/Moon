@@ -1,24 +1,25 @@
 ---
 layout: post
-title: "A Post with Images"
-date: 2013-05-22
-excerpt: "Examples and code for displaying images in posts."
-tags: [sample post, images, test]
+title: "Niger Population Mapping"
+date: 2016-10-01
+excerpt: "Project done with PhD colleague"
+tags: [MongoDB, Flask, Python, Javascript]
+project: true
 comments: true
 ---
 
-Here are some examples of what a post with images might look like. If you want to display two or three images next to each other responsively use `figure` with the appropriate `class`. Each instance of `figure` is auto-numbered and displayed in the caption.
+This
 
 ### Figures (for images or video)
 
 #### One Up
 
 <figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg"></a>
-	<figcaption><a href="http://www.flickr.com/photos/80901381@N04/7758832526/" title="Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr">Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr</a>.</figcaption>
+	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="https://github.com/abhi32ag/abhi32ag.github.io/assets/img/pop1/png"></a>
+	
 </figure>
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+This project involved the construction of a visualization to plot the population of the country Niger using election data. The tools utilized in this project include Flask - for the web application server, MongoDb - used as a database, Javascript, HMTL, CSS - for the front side webpage, Leaflet.js - For creating marker cluster groups and OSM ( Open Street Maps ) 
 
 #### Two Up
 
