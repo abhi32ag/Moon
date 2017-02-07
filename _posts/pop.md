@@ -13,8 +13,7 @@ tag:
 comments: true
 ---
 
-(https://github.com/abhi32ag.github.io/assets/img/pop1
-.png)    
+(https://github.com/abhi32ag.github.io/assets/img/pop1.png)    
     
 <center><b>Moon</b> is a minimal, one column jekyll theme.</center>
      
