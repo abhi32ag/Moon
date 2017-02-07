@@ -65,9 +65,19 @@ def voters_project():
 ### Using Leaflet.js and OSM:
 
 We fetch the data that is on the Flask Server using the following code 
-{% highlight python %}
+{% highlight javascript %}
 queue()
 	.defer(d3.json,"/data")
 	.await(makeGraphs);
 {% endhighlight %}
+
+A snippet of the code that is used to create the circle markers and plot them on the map is shown below :
+{% highlight javascript %}
+
+local_marker = L.circleMarker([lat,long] , {title: locality , n_population: n_population}).bindPopup(popup).openPopup() ;
+				local_marker.n_population = records[i].n_population ;
+				markers.addLayer(local_marker) ;
+{% endhighlight %}
+
+
 
