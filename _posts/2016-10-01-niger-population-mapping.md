@@ -3,6 +3,7 @@ layout: post
 title: "Niger Population Mapping"
 date: 2016-10-01
 excerpt: "Project done with PhD student Gregoire Lurton"
+url: niger-population-mapping/
 tags: [MongoDB, Flask, Python, Javascript]
 project: true
 comments: true
