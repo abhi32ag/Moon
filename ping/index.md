@@ -1,14 +1,15 @@
 ---
-layout: post
+layout: page
 title: Ping Me
 excerpt: "Email-ID and Contact Number"
 comments: false
 ---
-
-### Email-ID : 
+<center>
+Email-ID : 
 
 aagarg@uw.edu
 
-### Contact Number: 
+Contact Number: 
 
 ***-***-8032
+</center>
