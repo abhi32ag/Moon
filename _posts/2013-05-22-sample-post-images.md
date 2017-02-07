@@ -8,20 +8,18 @@ project: true
 comments: true
 ---
 
-This
 
-### Figures (for images or video)
 
-#### One Up
+
 
 <figure>
-	<a href="http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg"><img src="/assets/img/pop1.png"></a>
+	<img src="/assets/img/pop1.png">
 	
 </figure>
 
-This project involved the construction of a visualization to plot the population of the country Niger using election data. The tools utilized in this project include Flask - for the web application server, MongoDb - used as a database, Javascript, HMTL, CSS - for the front side webpage, Leaflet.js - For creating marker cluster groups and OSM ( Open Street Maps ) 
+This project involved the construction of a visualization to plot the population of the country Niger using election data. The tools utilized in this project include `Flask` - for the web application server, `MongoDb`- used as a database, `Javascript`, `HMTL`, `CSS` - for the front side webpage, `Leaflet.js` - For creating marker cluster groups and `OSM` ( Open Street Maps ) as the mapping plugin
 
-#### Two Up
+
 
 Apply the `half` class like so to display two images side by side that share the same caption.
 
