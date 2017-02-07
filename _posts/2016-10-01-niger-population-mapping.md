@@ -14,14 +14,14 @@ comments: true
 This project involved the construction of a visualization to plot the population of the country Niger using election data. The tools utilized in this project include `Flask` - for the web application server, `MongoDb`- used as a database, `Javascript`, `HMTL`, `CSS` - for the front side webpage, `Leaflet.js` - For creating marker cluster groups and `OSM` ( Open Street Maps ) as the mapping plugin
 
 <figure>
-	<img src="/assets/img/pop1.png">
+	<a href="https://github.com/abhi32ag/niger_election"><img src="/assets/img/pop1.png"></a>
 	
 </figure>
 
 By zooming in we can see that the larger clusters separate further. There is a search button provided to query villages that are located in Niger. The largeness of a cluster is distinguished by color. The cluster sizes are represented by the population in those particular cluster regions. A layer button is provided for switching between different layers such as sattelite view, grayscale, etc.
 
 <figure>
-	<img src="/assets/img/pop2.png">
+	<a href="https://github.com/abhi32ag/niger_election"><img src="/assets/img/pop2.png"></a>
 	
 </figure>
 
