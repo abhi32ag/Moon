@@ -2,7 +2,7 @@
 layout: post
 title: "Niger Population Mapping"
 date: 2016-10-01
-excerpt: "Project done with PhD colleague"
+excerpt: "Project done with PhD student Gregoire Lurton"
 tags: [MongoDB, Flask, Python, Javascript]
 project: true
 comments: true
@@ -19,78 +19,48 @@ comments: true
 
 This project involved the construction of a visualization to plot the population of the country Niger using election data. The tools utilized in this project include `Flask` - for the web application server, `MongoDb`- used as a database, `Javascript`, `HMTL`, `CSS` - for the front side webpage, `Leaflet.js` - For creating marker cluster groups and `OSM` ( Open Street Maps ) as the mapping plugin
 
+<figure>
+	<img src="/assets/img/pop2.png">
+	
+</figure>
 
 
-Apply the `half` class like so to display two images side by side that share the same caption.
+
+### Creating the Flask Engine : 
+Create the application route, which would render an index.html file
 
 {% highlight html %}
-<figure class="half">
-    <a href="/images/image-filename-1-large.jpg"><img src="/images/image-filename-1.jpg"></a>
-    <a href="/images/image-filename-2-large.jpg"><img src="/images/image-filename-2.jpg"></a>
-    <figcaption>Caption describing these two images.</figcaption>
-</figure>
+@app.route("/")
+def index():
+	return render_template("index.html")
+if __name__ == "__main__":
+	app.run(host='0.0.0.0', port=5000, debug = True)
 {% endhighlight %}
 
-And you'll get something that looks like this:
+### Connection with MongoDB :
 
-<figure class="half">
-	<a href="http://placehold.it/1200x600.JPG"><img src="http://placehold.it/600x300.jpg"></a>
-	<a href="http://placehold.it/1200x600.jpeg"><img src="http://placehold.it/600x300.jpg"></a>
-	<figcaption>Two images.</figcaption>
-</figure>
-
-#### Three Up
-
-Apply the `third` class like so to display three images side by side that share the same caption.
+We first need to set up a connection as MongoDB Client to the MongoDB Server. This is where our data is stored. The following lines of code list out the parameters needed for setting up a connection. We route the data to voters/project, a json object is returned from this function which is then accessed by Javacript in order to create the visualizations
 
 {% highlight html %}
-<figure class="third">
-	<img src="/images/image-filename-1.jpg">
-	<img src="/images/image-filename-2.jpg">
-	<img src="/images/image-filename-3.jpg">
-	<figcaption>Caption describing these three images.</figcaption>
-</figure>
+MONGODB_HOST = 'localhost'
+MONGODB_PORT = 27017
+DBS_NAME = 'voter'
+COLLECTION_NAME = 'project'
+FIELDS = {'locality' : True, 'latitude': True, 'longitude': True, 'population': True, '_id':False}
+
+@app.route("/voters/project")
+def voters_project():
+	connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+	collection = connection[DBS_NAME][COLLECTION_NAME]
+	projects = collection.find(projection = FIELDS)
+
+	json_projects = []
+	for project in projects:
+		json_projects.append(project)
+	json_projects = json.dumps(json_projects, default = json_util.default)
+	connection.close()
+	return json_projects
 {% endhighlight %}
 
-And you'll get something that looks like this:
 
-<figure class="third">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<img src="http://placehold.it/600x300.jpg">
-	<figcaption>Three images.</figcaption>
-</figure>
 
-### Alternative way
-
-Another way to achieve the same result is to include `gallery` Liquid template. In this case you
-don't have to write any HTML tags – just copy a small block of code, adjust the parameters (see below)
-and fill the block with any number of links to images. You can mix relative and external links.
-
-Here is the block you might want to use:
-
-{% highlight liquid %}
-{% raw %}
-{% capture images %}
-	http://vignette2.wikia.nocookie.net/naruto/images/9/97/Hinata.png
-	http://vignette4.wikia.nocookie.net/naruto/images/7/79/Hinata_Part_II.png
-	http://vignette1.wikia.nocookie.net/naruto/images/1/15/J%C5%ABho_S%C5%8Dshiken.png
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
-{% endraw %}
-{% endhighlight %}
-
-Parameters:
-
-- `caption`: Sets the caption under the gallery (see `figcaption` HTML tag above);
-- `cols`: Sets the number of columns of the gallery.
-Available values: [1..3].
-
-It will look something like this:
-
-{% capture images %}
-	http://vignette2.wikia.nocookie.net/naruto/images/9/97/Hinata.png
-	http://vignette4.wikia.nocookie.net/naruto/images/7/79/Hinata_Part_II.png
-	http://vignette1.wikia.nocookie.net/naruto/images/1/15/J%C5%ABho_S%C5%8Dshiken.png
-{% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
