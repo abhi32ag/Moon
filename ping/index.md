@@ -5,11 +5,11 @@ excerpt: "Email-ID and Contact Number"
 comments: false
 ---
 <center>
-Email-ID : 
+<b>Email-ID</b> : 
 
 aagarg@uw.edu
-<break>
-Contact Number: 
+<br>
+<b>Contact Number</b>: 
 
 ***-***-8032
 </center>
