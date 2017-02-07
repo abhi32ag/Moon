@@ -26,7 +26,7 @@ This project involved the construction of a visualization to plot the population
 
 
 
-### Creating the Flask Engine : 
+### Creating the Flask Engine: 
 Create the application route, which would render an index.html file
 
 {% highlight html %}
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=5000, debug = True)
 {% endhighlight %}
 
-### Connection with MongoDB :
+### Connection with MongoDB:
 
 We first need to set up a connection as MongoDB Client to the MongoDB Server. This is where our data is stored. The following lines of code list out the parameters needed for setting up a connection. We route the data to voters/project, a json object is returned from this function which is then accessed by Javacript in order to create the visualizations
 
@@ -61,6 +61,8 @@ def voters_project():
 	connection.close()
 	return json_projects
 {% endhighlight %}
+
+### Using Leaflet.js and OSM:
 
 
 
