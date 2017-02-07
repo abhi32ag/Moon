@@ -13,7 +13,7 @@ comments: true
 
 This project provides an analysis of the dataset provided by Pronto CycleShare data that was made available in 2015. It is inspired by the analysis done by one of the Data Science Fellow's here at University of Washington, Jake Vanderplas. The project involved the use of `NumpPy`, `Pandas` for the data analysis part and the use of `Matplotlib` and `Seaborn` for interesting plots and visualizations that we can observe below. Following is the snippet to obtain count of trips by date. 
 
-
+{% highlight python %}
 by_date = trip_data.pivot_table('trip_id',aggfunc = 'count', index='date',columns ='usertype')
 fig, ax = plt.subplots(2, figsize=(16,8))
 fig.subplots_adjust(hspace=0.4)
