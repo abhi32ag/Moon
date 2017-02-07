@@ -1,15 +1,19 @@
 ---
 layout: page
 title: Ping Me
-excerpt: "Email-ID and Contact Number"
+excerpt: ""
 comments: false
 ---
 <center>
-<b>Email-ID</b> : 
+<b>Academic Email-ID :</b> 
 
 aagarg@uw.edu
 <br>
-<b>Contact Number</b>: 
+<b>Alternate Email-ID :</b> 
 
-***-***-8032
+garg.abhinav2015@gmail.com
+
+<b> Snapchat :</b>
+
+abhi3ag
 </center>
