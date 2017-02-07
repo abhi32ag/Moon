@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "An analysis of Pronto CycleShare data "
-date: 2016-10-01
+date: 2016-11-01
 excerpt: "Project to analyze Pronto CycleShare data, that is inspired by Jake Vanderplas's analysis methods"
 url: pronto-analysis/
 tags: [IPython, Pandas, Python, NumPy]
-project: true
+project: false
 comments: true
 ---
 
