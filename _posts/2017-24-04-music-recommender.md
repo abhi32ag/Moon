@@ -70,4 +70,8 @@ Recommendations for snoop dogg:
 
 {% endhighlight %}
 
-Credits to <a href = https://beckernick.github.io/datascience/> Nick Becker </a> whose blog post on music recommenders inspired this project 
+We can see how these recommendations are very good ! We can also work with binary counts instead of considering total artist plays. Another feature that could be introduced would be fuzzy matching so that artist names with different characters could be recognized as well. Some limitations of this implementation is the need to maintain a matrix with item similarity, the intuition is basically expected recommendations and isn't a bold prediction which user-based approaches could make, recommendations are made just for popular artists so it would be interesting to build a recommender for low-profile artists and lastly scaling such a solution to the larger dataset would need a lot of optimization. 
+
+<br><br>
+
+Credits to <a href = "https://beckernick.github.io/datascience/"> Nick Becker </a> whose blog post on music recommenders inspired this project 
