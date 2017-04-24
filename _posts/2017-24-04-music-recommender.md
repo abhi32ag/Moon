@@ -29,3 +29,45 @@ popularity_threshold = 40000
 user_data_popular_artists = user_data_with_artist_plays.query('total_artist_plays >= @popularity_threshold')
 {% endhighlight %}
 
+After we've obtained our subsetted user-artist data, we restrict our data to just users that are from the United States to reduce the complexity of the project and obtain a more narrow result. Once we have this wide matrix created we implement a nearest neighbors model in order to obtain artists closer to the artist of concern by utilizing the artist-plays vector. We calculate the distance between each artist using `Cosine` distance. Once we have these distances calculated, we pick the closest 10 to make our recommendations. Here's a snippet of how sklearn is used. 
+
+{% highlight python %}
+from sklearn.neighbors import NearestNeighbors
+
+model_knn = NearestNeighbors(metric = 'cosine', algorithm = 'brute')
+model_knn.fit(wide_artist_data_sparse)
+
+#Making recommendations 
+query_index = np.random.choice(wide_artist_data.shape[0])
+print(query_index)
+distances, indices = model_knn.kneighbors(wide_artist_data.iloc[query_index,:].reshape(1,-1),
+                                         n_neighbors = 6)
+for i in range(0, len(distances.flatten())):
+    if i == 0:
+        print('Recommendations for {0}: \n'.format(wide_artist_data.index[query_index]))
+    else:
+        print('{0}: {1}, with distance: {2}'.format(i,wide_artist_data.index[indices.flatten()[i]]
+                                                   , distances.flatten()[i]))
+{% endhighlight %}
+
+Here is just a sample of the type of recommendations we observe if snoop dogg is selected as a users selected artist into consideration 
+
+{ % highlight %}
+Possible matches: [('snoop dogg', 100)]
+
+Recommendations for snoop dogg:
+
+1: dr. dre, with distance of 0.676800315101:
+2: 2pac, with distance of 0.703038818823:
+3: the game, with distance of 0.70661498309:
+4: 50 cent, with distance of 0.729609338712:
+5: ludacris, with distance of 0.73608257713:
+6: notorious b.i.g., with distance of 0.736465827754:
+7: jay-z, with distance of 0.739437837488:
+8: nas, with distance of 0.759249192896:
+9: ice cube, with distance of 0.761719788076:
+10: t.i., with distance of 0.763270831769:
+
+{% endhighlight %}
+
+Credits to <a href = https://beckernick.github.io/datascience/> Nick Becker </a> whose blog post on music recommenders inspired this project 
