@@ -52,7 +52,7 @@ for i in range(0, len(distances.flatten())):
 
 Here is just a sample of the type of recommendations we observe if snoop dogg is selected as a users selected artist into consideration 
 
-{ % highlight python %}
+{% highlight python %}
 Possible matches: [('snoop dogg', 100)]
 
 Recommendations for snoop dogg:
