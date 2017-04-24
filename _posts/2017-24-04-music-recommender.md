@@ -4,7 +4,7 @@ title: "Music Recommender using Last.FM data"
 date: 2017-04-24
 excerpt: "Project to utilize artist-plays to recommend different artists to a user"
 url: music-recommender/
-tags: [IPython, Pandas, Python, NumPy]
+tags: [IPython, Pandas, Python, NumPy, Scikit-Learn, Scipy, Recommender Systems]
 project: true
 comments: true
 ---
